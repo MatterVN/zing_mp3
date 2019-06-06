@@ -1,0 +1,100 @@
+# input_boolean:
+zing_mp3:
+  name: Play Zing Top 100
+  icon: mdi:music-box
+zing_repeat:  
+  name: Repeat
+  icon: mdi:repeat
+zing_shuffle:  
+  name: Shuffle
+  icon: mdi:shuffle-variant
+  
+# input_select
+zing_mp3:
+    name: Category
+    options:
+      - Pop
+      - Country
+      - Rock
+      - Dance
+      - R&B
+      - Rap
+      - Soundtrack
+      - Nhac tre
+      - Tru tinh
+      - Que huong
+      - Cach mang
+      - Rock Viet
+      - Rap Viet
+      - Dance Viet
+    initial: Pop
+    icon: mdi:format-list-checkbox
+
+# group:
+default_view:
+    name: Home
+    view: yes
+    icon: mdi:home
+    entities:
+        - group.zing_mp3
+zing_mp3:
+  name: Zing MP3
+  control: hidden
+  entities:
+    - input_boolean.zing_mp3
+    - input_select.zing_mp3
+    - input_boolean.zing_repeat
+    - input_boolean.zing_shuffle
+    
+# script:    
+zing_play_top100:
+ sequence:
+   - service: zing_mp3.play_top100
+     data_template:
+       entity_id: media_player.google_home_speaker
+       category: >
+         {{ states.input_select.zing_mp3.state }} 
+       repeat: >
+         {{ states.input_boolean.zing_repeat.state }}          
+       shuffle: >
+         {{ states.input_boolean.zing_shuffle.state }}          
+         
+# automation:
+- alias: Play Zing MP3 top 100
+  trigger:
+    platform: state
+    entity_id: input_boolean.zing_mp3
+    to: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.play_zing_mp3
+
+- alias: Play zing top 100
+   trigger:
+     platform: state
+     entity_id: input_select.zing_mp3
+   condition:
+     condition: state
+     entity_id: input_boolean.zing_mp3
+     state: 'on'
+   action:
+     service: script.turn_on
+     entity_id: script.play_zing_mp3
+
+
+- alias: play zing_mp3 by trigger repeat or shuffle
+  trigger:
+    platform: state
+    entity_id: 
+      - input_boolean.zing_repeat
+      - input_boolean.zing_shuffle
+  condition:
+    condition: state
+    entity_id: input_boolean.zing_mp3
+    state: 'on'      
+  action:
+    service: script.turn_on
+    entity_id: script.play_zing_mp3
+
+
+    

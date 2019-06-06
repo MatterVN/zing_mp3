@@ -1,0 +1,8 @@
+{
+  "domain": "zing_mp3",
+  "name": "Zing MP3",
+  "documentation": "https://github.com/ttvt/hassio/tree/master/custom_components/zing_mp3",
+  "dependencies": [],
+  "codeowners": ["ttvt"],
+  "requirements": []
+}
