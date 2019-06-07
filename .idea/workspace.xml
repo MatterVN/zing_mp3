@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="433cf755-c226-4aaa-bd76-00b0c4b8fb11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_components/zing_mp3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_components/zing_mp3/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_components/zing_mp3/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/custom_components/zing_mp3/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_components/zing_mp3/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/custom_components/zing_mp3/version.json" afterDir="false" />
-    </list>
+    <list default="true" id="433cf755-c226-4aaa-bd76-00b0c4b8fb11" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -167,16 +162,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559875006755</updated>
-      <workItem from="1559875008869" duration="705000" />
+      <workItem from="1559875008869" duration="783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="705000" />
+    <option name="totallyTimeSpent" value="783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="725" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
