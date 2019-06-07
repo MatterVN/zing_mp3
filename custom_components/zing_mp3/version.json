@@ -5,6 +5,7 @@
     "files": [
         "__init__.py",
         "manifest.json",
-        "services.yaml"
+        "services.yaml",
+        "version.json"
     ]
 }

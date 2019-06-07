@@ -1,4 +1,4 @@
-**Notice:** Next Version (WIP) will exposed as a media_player. In the meantime, use [this](https://github.com/magnetvn/zing_mp3/zing_mp3.yaml) as frontend
+**Notice:** Next Version (WIP) will exposed as a media_player. In the meantime, use [this](https://github.com/MagnetVN/zing_mp3/blob/master/zing_mp3.yaml) as frontend
  
 # Installation
 
@@ -28,7 +28,7 @@ It should look similar to this after installation:
 zing_mp3:
 ```
 
-4. To use as frontend please reference [this file](https://github.com/ttvt/hassio/blob/master/custom_components/zing_mp3/zing_mp3.yaml)
+4. To use as frontend please reference [this file](https://github.com/MagnetVN/zing_mp3/blob/master/zing_mp3.yaml)
 
 
 # Usages

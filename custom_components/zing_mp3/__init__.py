@@ -13,8 +13,8 @@ _LOGGER = logging.getLogger(__name__)
 
 DOMAIN = 'zing_mp3'
 VERSION = '1.0.4'
-VERSION_URL = ("https://raw.githubusercontent.com/ttvt/hassio/master/custom_components/zing_mp3/version.json")
-REMOTE_BASE_URL = ("https://raw.githubusercontent.com/ttvt/hassio/master/custom_components/zing_mp3/")
+VERSION_URL = ("https://raw.githubusercontent.com/MagnetVN/zing_mp3/master/custom_components/zing_mp3/version.json")
+REMOTE_BASE_URL = ("https://raw.githubusercontent.com/MagnetVN/zing_mp3/master/custom_components/zing_mp3/")
 
 COMPONENT_ABS_DIR = os.path.dirname(
     os.path.abspath(__file__))
