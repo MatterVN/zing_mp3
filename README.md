@@ -1,12 +1,12 @@
-**Notice:** Next Version (WIP) will exposed as a media_player. In the meantime, use [this](https://github.com/ttvt/hassio/blob/master/custom_components/zing_mp3/zing_mp3.yaml) as frontend
+**Notice:** Next Version (WIP) will exposed as a media_player. In the meantime, use [this](https://github.com/magnetvn/zing_mp3/zing_mp3.yaml) as frontend
  
 # Installation
 
-### Auto Install (Recommend)
-1. Make sure you've the [Custom Component Store](https://github.com/ttvt/hassio/tree/master/custom-component-store) installed and working.
-2. Navigate to Hass.io Store at port 8100 (e.g. http://hassio.local:8100) 
-3. Select Zing_mp3 and install
-
+### Auto Install (Recommended)
+1. Make sure you've the [Component Store](https://github.com/ttvt/hassio/tree/master/componentstore) installed and working.
+2. Navigate to the Store (on the menu bar), select Store 
+3. Select **zing_mp3** and install.
+4. Restart Home-Assistant.
 
 ### Manual
 1. Create a directory `custom_components/zing_mp3` in your Home Assistant configuration directory.
