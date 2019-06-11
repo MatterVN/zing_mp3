@@ -4,7 +4,7 @@
 
 ### Auto Install (Recommended)
 1. Make sure you've the [Component Store](https://github.com/ttvt/hassio/tree/master/componentstore) installed and working.
-2. Navigate to the Store (on the menu bar), select Store 
+2. Navigate to the Store (on the menu bar), then select Store 
 3. Select **zing_mp3** and install.
 4. Restart Home-Assistant.
 
@@ -14,7 +14,7 @@
 
 It should look similar to this after installation:
 ```
-.homeassistant/ (/config)
+.homeassistant/ (/config in Hass.io)
 |-- custom_components/
 |   |-- zing_mp3/
 |       |-- __init__.py
@@ -28,7 +28,7 @@ It should look similar to this after installation:
 zing_mp3:
 ```
 
-4. To use as frontend please reference [this file](https://github.com/MagnetVN/zing_mp3/blob/master/zing_mp3.yaml)
+4. To use as frontend please reference to [this file](https://github.com/MagnetVN/zing_mp3/blob/master/zing_mp3.yaml)
 
 
 # Usages
