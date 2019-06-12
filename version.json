@@ -1,11 +1,10 @@
 {            
-    "version": "1.0.4",
+    "version": "1.0.5",
     "minHAVersion": "0.90.0b0",
     "releaseNotes": "A new version is available that is compatible with your system. Call the ``zing_mp3.update_component`` service to update the component.",
     "files": [
         "__init__.py",
         "manifest.json",
-        "services.yaml",
-        "version.json"
+        "services.yaml"
     ]
 }
