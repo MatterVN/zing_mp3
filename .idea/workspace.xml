@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="433cf755-c226-4aaa-bd76-00b0c4b8fb11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/custom_components/zing_mp3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_components/zing_mp3/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_components/zing_mp3/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/version.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_components/zing_mp3/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/custom_components/zing_mp3/services.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/custom_components/zing_mp3/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -64,12 +64,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/custom_components/zing_mp3/services.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>VERSION</find>
+      <find>REMOTE_BASE_URL</find>
+      <find>cv</find>
+      <find>ConfigType</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,6 +95,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/version.json" />
         <option value="$PROJECT_DIR$/custom_components/zing_mp3/__init__.py" />
+        <option value="$PROJECT_DIR$/custom_components/zing_mp3/services.yaml" />
       </list>
     </option>
   </component>
@@ -180,12 +193,12 @@
       <workItem from="1559875008869" duration="783000" />
       <workItem from="1559879324721" duration="759000" />
       <workItem from="1560220595789" duration="152000" />
-      <workItem from="1560307468852" duration="76000" />
+      <workItem from="1560307468852" duration="723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1770000" />
+    <option name="totallyTimeSpent" value="2417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="160" y="23" width="1280" height="725" extended-state="0" />
@@ -231,16 +244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom_components/zing_mp3/services.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/custom_components/zing_mp3/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/version.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -250,8 +253,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/custom_components/zing_mp3/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom_components/zing_mp3/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom_components/zing_mp3/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>

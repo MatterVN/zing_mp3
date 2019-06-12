@@ -23,8 +23,3 @@ play:
     name:
       description: Song name to play
       example: 'happy new year'
-
-check_update:
-  description: Check for Zing MP3 updates.
-update_component:
-  description: Update Zing MP3 component.

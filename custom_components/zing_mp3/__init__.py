@@ -3,18 +3,9 @@
 '''
 import json, requests, time, random, datetime, hmac, hashlib, urllib, gzip, logging, os.path
 
-from distutils.version import StrictVersion
-from homeassistant.const import (
-    ATTR_FRIENDLY_NAME, __version__ as current_ha_version)
-import homeassistant.helpers.config_validation as cv
-from homeassistant.helpers.typing import ConfigType
-
 _LOGGER = logging.getLogger(__name__)
 
 DOMAIN = 'zing_mp3'
-VERSION = '1.0.5'
-VERSION_URL = ("https://raw.githubusercontent.com/MagnetVN/zing_mp3/{}/version.json")
-REMOTE_BASE_URL = ("https://raw.githubusercontent.com/MagnetVN/zing_mp3/{}/custom_components/zing_mp3/")
 
 COMPONENT_ABS_DIR = os.path.dirname(
     os.path.abspath(__file__))
@@ -176,77 +167,5 @@ def setup(hass, config):
 
     hass.services.register(DOMAIN, 'play_top100', play_top100)
     hass.services.async_register(DOMAIN, 'play', play_song)
-    hass.services.async_register(DOMAIN, 'check_update', _check_update)
-    hass.services.async_register(DOMAIN, 'update_component', _update_component)
 
     return True
-# ----------------------------------------------------------------------------------------------------------------------
-async def _update(hass, do_update=False, notify_if_latest=True):
-    try:
-        request = requests.get(VERSION_URL, stream=True, timeout=10)
-    except:
-        _LOGGER.error("An error occurred while checking for updates. "
-                      "Please check your internet connection.")
-        return
-
-    if request.status_code != 200:
-        _LOGGER.error("Invalid response from the server while "
-                      "checking for a new version")
-        return
-
-    data = request.json()
-    last_version = data['version']
-    min_ha_version = data['minHAVersion']
-    release_notes = data['releaseNotes']
-
-    if StrictVersion(last_version) <= StrictVersion(VERSION):
-        if notify_if_latest:
-            hass.components.persistent_notification.async_create(
-                "You're already using the latest version!", title='Zing MP3')
-        return
-
-    if StrictVersion(current_ha_version) < StrictVersion(min_ha_version):
-        hass.components.persistent_notification.async_create(
-            "There is a new version of Zing MP3, but it is **incompatible** "
-            "with your HA version. Please first update Home Assistant.", title='Zing MP3')
-        return
-
-    if do_update is False:
-        hass.components.persistent_notification.async_create(
-            release_notes, title='Zing MP3')
-        return
-
-    # Begin update
-    files = data['files']
-    has_errors = False
-
-    for file in files:
-        try:
-            source = REMOTE_BASE_URL + file
-            dest = os.path.join(COMPONENT_ABS_DIR, file)
-            os.makedirs(os.path.dirname(dest), exist_ok=True)
-            Helper.downloader(source, dest)
-        except:
-            has_errors = True
-            _LOGGER.error("Error updating %s. Please update the file manually.", file)
-
-    if has_errors:
-        hass.components.persistent_notification.async_create(
-            "There was an error updating one or more files of Zing MP3. "
-            "Please check the logs for more information.", title='Zing MP3')
-    else:
-        hass.components.persistent_notification.async_create(
-            "Successfully updated to {}. Please restart Home Assistant."
-            .format(last_version), title='Zing MP3')
-
-class Helper():
-    @staticmethod
-    def downloader(source, dest):
-        req = requests.get(source, stream=True, timeout=10)
-
-        if req.status_code == 200:
-            with open(dest, 'wb') as fil:
-                for chunk in req.iter_content(1024):
-                    fil.write(chunk)
-        else:
-            raise Exception("File not found")
